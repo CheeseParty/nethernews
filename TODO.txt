@@ -1,0 +1,15 @@
+﻿Page d'auteur
+- Redirection interne htaccess
+
+Page single
+- Lien vers la page d'auteur
+- Infos auteur
+- Commentaires
+
+Page recherche
+
+Système catégories
+
+Catégories + descriptions
+
+Vrai footer ?
