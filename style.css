@@ -4,58 +4,199 @@ Description: nether-news.fr wordpress theme
 Version: 1.0
 Author: Team CheeseParty (GitHub)
 Author URI: nether-news.fr
-Tags: none
 */
 
-body {
-    font-family: arial, helvetica, verdana;
-    font-size: 0.8em;
-    width: 100%;
+@font-face {
+    font-family: 'bebas_neue_regular';
+    src: url('fonts/bebasneue/regular/bebasneue_regular-webfont.eot');
+    src: url('fonts/bebasneue/regular/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue/regular/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue/regular/bebasneue_regular-webfont.woff') format('woff'),
+         url('fonts/bebasneue/regular/bebasneue_regular-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue/regular/bebasneue_regular-webfont.svg#bebas_neue_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neue_bold';
+    src: url('fonts/bebasneue/bold/bebasneue_bold-webfont.eot');
+    src: url('fonts/bebasneue/bold/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue/bold/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue/bold/bebasneue_bold-webfont.woff') format('woff'),
+         url('fonts/bebasneue/bold/bebasneue_bold-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue/bold/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-.header {
-    background-color: #1be;
-    margin-left: 14%;
+.site-title,
+h1,
+h2,
+h3 {
+    font-family: 'bebas_neue_regular';
+    font-weight: normal;
+}
+
+.site-wrap {
+    min-height: 100%;
+    margin-bottom: -75px;
+}
+
+.site-wrap:after {
+    content: "";
+    display: block;
+    height: 75px;
+}
+
+.site-content {
+    width: 90%;
+    max-width: 825px;
+    margin: 0 auto;
+}
+
+.site-header {
+    background: #17CC64;
     top: 0;
-    border-width: 0.1em;
-    border-color: #999;
-    border-style: solid;
-    width: 72%;
-    height: 250px;
 }
 
-.content {
-    background-color: #999;
-    margin-left: 14%;
-    margin-top: 5px;
-    float: left;
-    width: 46%;
-    border-width: 0.1em;
-    border-color: #999;
-    border-style: solid;
+.site-branding {
+    width: 90%;
+    max-width: 825px;
+    margin: 0 auto;
+    padding: 15px;
 }
 
-.sidebar {
-    background-color: #1d5;
-    margin-right: 14%;
-    margin-top: 5px;
-    float: right;
-    border-width: 0.1em;
-    border-color: #999;
-    border-style: solid;
-    top: 180px;
-    width: 23%;
+.site-title {
+    font-family: 'bebas_neue_bold';
+    margin: 0;
+    font-size: 3.2em;
 }
 
-.footer {
-    background-color: red;
-    margin-left: 14%;
-    float: left;
-    margin-top: 5px;
-    width: 72%;
-    height: 50px;
-    border-width: 0.1em;
-    border-color: #999;
-    border-style: solid;
+.site-title-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.site-description {
+    margin: 0;
+}
+
+.post {
+    margin: 2em 0;
+    box-shadow: 0 0 5px 0 #ADADAD;
+}
+
+.post:last-of-type {
+    margin-bottom: 3em;
+}
+
+.post-title {
+    margin: 0;
+    padding: 0.3em 0.4em;
+    font-size: 2em;
+}
+
+.post-title-link {
+    text-decoration: none;
+    color: #272727;
+}
+
+.post-footer {
+    padding: 1em;
+    font-size: .9em;
+}
+
+.post-footer a {
+    text-decoration: none;
+    color: #0E555D;
+    border-bottom: 1px solid #0E555D;
+}
+
+.attachment-post-thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.site-footer {
+    background: #151515;
+    line-height: 75px;
+    height: 75px;
+    text-align: center;
+}
+
+.site-footer-copyright {
+    color: #CBCBCB;
+    font-size: .8em;
+}
+
+.cat-title {
+    background: #000;
+    display: inline-block;
+    color: #fff;
+    padding: 2px 5px;
+    margin: 0.5em 0 0;
+    font-size: 2.3em;
+}
+
+.cat-description {
+    /* A compléter quand les descriptions seront faites */
+}
+
+.single-bshadow {
+    box-shadow: 0 2px 5px 0 #ADADAD;
+}
+
+.single-header {
+    margin-top: 2em;
+}
+
+.single-header-cover {
+    background: rgba(0,0,0,0.5);
+}
+
+.single-header-content {
+    padding: 1.1em 0 1.5em 1.5em;
+}
+
+.single-header-title {
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.single-header-author {
+    background: #000;
+    color: #fff;
+    padding: 2px 10px 8px 10px;
+    font-size: 0.9em;
+}
+
+.single-content {
+    padding: 1.8em 0;
+    margin-bottom: 2em;
+}
+
+.single-content p {
+    margin: 0 1.5em;
+    padding: 0;
+}
+
+.single-content p img {
+    display: block;
+    width: 100%;
 }
